@@ -1,0 +1,2993 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+    height: 85px;
+    width: 100%;
+    position: fixed;
+    top: 15px;
+    left: 0;
+    opacity: 0.95;
+    z-index: 10;
+}
+
+.container {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.header-top {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.header-logo {
+    width: 15%;
+    line-height: 0.3;
+    margin-left: 15px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.header-logo p {
+    font-size: 12px;
+}
+
+.header-list {
+    width: 75%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nab-list li {
+    list-style: none;
+    float: left;
+    margin: 15px 30px;
+}
+
+.nab-list li a:hover {
+    opacity: 0.6;
+}
+
+.header-btn {
+  width: 7%;
+}
+
+.header-btn img {
+  height: 80px;
+  margin: 0 auto;
+}
+
+.header-btn img:hover {
+  opacity: 0.6;
+}
+
+.none {
+  display: none;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 16px;
+    right: 40px;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: black;
+    position: absolute;
+}
+
+.menu-btn span:before {
+    bottom: 8px;
+}
+
+.menu-btn span:after {
+    top: 8px;
+}
+
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+.menu-list {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: #3584bb;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+
+#menu-btn-check:checked ~ .menu-list {
+    left: 0;/*メニューを画面内へ*/
+}
+
+.menu-list ul {
+    padding: 70px 10px 0;
+}
+
+.menu-list ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+
+.menu-list ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+
+.menu-list ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+main {
+    height: auto;
+}
+
+.top-wrapper2 , .top-wrapper3, .top-wrapper4{
+  display: none;
+}
+
+.contact-area {
+    background-color: #2e2e2e;
+    color: #fff;
+    height: 360px;
+    margin: 50px 0;
+}
+
+.area-top {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.contact-logo {
+    width: 50%;
+    text-align: center;
+}
+
+.contact-logo h2 {
+    font-size: 30px;
+}
+
+.Shoplist {
+    width: 50%;
+    text-align: center;
+}
+
+.Shoplist span {
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.contact-btn {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.btn-LINE:hover {
+    opacity: 0.7;
+}
+
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  /* displayをnoneに指定してください */
+  display: none;
+}
+
+.contact1 {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.contact1-img {
+  position: absolute;
+  width: 100%;
+}
+
+.contact1-img img {
+  width: 45%;
+  height: 500px;
+}
+
+.contact1-name {
+    position: relative;
+    top: 5px;
+    left: 890px;
+    font-size: 45px;
+    font-weight: 500;
+    color: #27b0cb;
+}
+
+.contact1-p {
+    background-color: #e3f2f7;
+    margin-left: 790px;
+    margin-top: -60px;
+    margin-bottom: 50px;
+    padding: 50px 70px 70px 80px;
+}
+
+.contact1-p h3 {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.6;
+    width: 80%;
+    margin: 30px auto 50px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.contact1-p h3 span {
+  padding-left: 160px;
+}
+
+.contact1-p h3:before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px rgb(119, 195, 223);
+}
+
+.contact1-p h3:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3px rgb(119, 195, 223);
+}
+
+.contact1-p p {
+  text-align: center;
+  line-height: 1.8;
+}
+
+.contact1-p a {
+  display: none;
+  background-color: #27b0cb;
+  background-image: linear-gradient(150deg, #27b0cb 0%, #0793af 100%);
+  width: 35%;
+  font-size: 13px;
+  color: #fff;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.contact1-p a:hover {
+    opacity: 0.7;
+}
+
+.contact2 img {
+  width: 100%;
+}
+
+.contact3 {
+    background-image: url();
+    background-size: contain;
+    height: auto;
+}
+
+.contact-title {
+    text-align: center;
+    line-height: 0.1;
+}
+
+.contact-title h1 {
+    font-size: 80px;
+    font-weight: bold;
+    color: #27b0cb;
+    margin-top: 90px;
+    padding: 50px 0 0;
+}
+
+.contact-title p {
+    color: #404040;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.contact-box1 img {
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    z-index: 2;
+}
+
+.contact-text1 {
+    position: relative;
+    top: 70px;
+    left: 250px;
+    z-index: 1;
+    padding: 20px 160px;
+    height: auto;
+    width: 900px;
+    background-color: #80f4c3;
+    background-image: linear-gradient(150deg, #80f4c3 0%, #0cb6e3 100%);
+    color: #fff;
+    margin-bottom: 100px;
+}
+
+.contact-text1 span {
+    font-size: 4.1em;
+    line-height: 1em;
+    letter-spacing: 3px;
+}
+
+.contact-text1 h3 {
+    font-size: 22px;
+    display: flex;
+}
+
+.contact-box2 img {
+    z-index: 2;
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    left: 1180px;
+}
+
+.contact-text2 {
+    position: relative;
+    top: 70px;
+    z-index: 1;
+    padding: 20px 160px;
+    height: auto;
+    width:900px;
+    background-color: #e8f57c;
+    background-image: linear-gradient(150deg, #e8f57c 0%, #0ed2c7 99%);
+    color: #fff;
+    margin-bottom: 110px;
+}
+
+.contact-text2 span {
+    font-size: 4.1em;
+    line-height: 1em;
+    letter-spacing: 3px
+}
+
+.contact-text2 h3 {
+    font-size: 22px;
+    display: flex;
+}
+
+.contact-box3 img {
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    z-index: 2;
+}
+
+.contact-text3 {
+    position: relative;
+    top: 70px;
+    left: 250px;
+    z-index: 1;
+    padding: 20px 160px;
+    height: auto;
+    width: 900px;
+    background-color: #80f4c3;
+    background-image: linear-gradient(150deg, #80f4c3 0%, #0cb6e3 100%);
+    color: #fff;
+}
+
+.contact-text3 span {
+    font-size: 4.1em;
+    line-height: 1em;
+    letter-spacing: 3px;
+}
+
+.contact-text3 h3 {
+    font-size: 22px;
+    display: flex;
+}
+
+.contact-text3 p br {
+  display: none;
+}
+
+.contact4 {
+  width: 100%;
+}
+
+.contact-top {
+    display: flex;
+    width: 75%;
+    margin: 60px auto 0;
+}
+
+.title-left {
+  width: 40%;
+}
+
+.title-right {
+  width: 60%;
+  margin-top: 120px;
+  border-left: 1px solid #404040;
+  padding-top: 15px;
+  padding-left: 30px;
+  height: 90px;
+  vertical-align: middle;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30px auto 0;
+}
+
+.wrap li {
+    width: 23%;
+    height: 240px;
+    padding: 20px 0;
+    margin: 10px auto;
+    background-color: #CAE6F2FF;
+    list-style: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.wrap li a {
+    display: block;
+    color: black;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration-line: none;
+}
+
+.wrap li:hover {
+    background-color: #cff7f0;
+}
+
+.wrap li img {
+  width: 50%;
+}
+
+.wrap h4 {
+  margin-top: 20px;
+}
+
+.btn-case {
+    display: block;
+    width: 270px;
+    height: 70px;
+    background-color: #27b0cb;
+    background-image: linear-gradient(150deg, #27b0cb 0%, #0793af 100%);
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration-line: none;
+    color: #fff;
+    line-height: 70px;
+    margin: 20px auto 50px;
+    text-align: center;
+}
+
+.btn-case:hover {
+    opacity: 0.7;
+}
+
+.contact5 {
+    height: auto;
+    background-color: #e3f2f7;
+}
+
+.MENU-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 25px auto;
+    padding-bottom: 30px;
+}
+
+.MENU-wrap li {
+    width: 29%;
+    height: auto;
+    margin: 20px auto;
+    list-style: none;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.MENU-wrap li:hover {
+    opacity: 0.7;
+}
+
+.MENU-wrap img {
+    height: 240px;
+    width: 280px;
+}
+
+.MENU-wrap a {
+    color: #fff;
+    text-decoration-line: none;
+    font-weight: 500;
+}
+
+.MENU-wrap li h4 {
+   letter-spacing: 2px;
+   font-size: 21px;
+   background-color: #27b0cb;
+   margin: 0 auto;
+   padding-top: 10px;
+   height: 50px;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+
+.btn-MENU {
+    background-color: #27b0cb;
+    width: 200px;
+    height: 40px;
+    padding: 8px;
+    margin: 0 auto 10px;
+}
+
+.contact6 {
+    padding-top: 80px;
+}
+
+.contact-main {
+    display: flex;
+}
+
+.contact6-left {
+    width: 55%;
+}
+
+.contact6-right {
+    width: 45%;
+}
+
+.contact6-logo {
+    text-align: center;
+    line-height: 0.1;
+    padding-right: 5px;
+}
+
+.contact6-logo h2 {
+    font-size: 40px;
+    font-weight: 600;
+    font-stretch: semi-expanded;
+}
+
+.contact6-logo p {
+    font-weight: 500;
+}
+
+.contact6-logo br {
+  line-height: 0.4;
+}
+
+.contact6-logo span {
+    font-size: 14px;
+    line-height: normal;
+}
+
+.Shoplist2 {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.tell {
+    width: 50%;
+    margin: 10px auto;
+    line-height: 1;
+}
+
+.tell p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.tell span {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.btn-reservation2 {
+  width: 50%;
+  margin-top: 20px;
+}
+
+.btn-reservation2 img{
+    width: 80%;
+    margin-left: 10px;
+}
+
+.btn-reservation2 img:hover {
+    opacity: 0.7;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid #27b0cb;
+    width: 80%;
+    margin: 0 auto;
+}
+
+table th, table td {
+    border: 1px dashed #404040;
+    text-align: center;
+}
+
+table th {
+  background-color: #e3f2f7;
+}
+
+.time {
+    padding: 3px 10px;
+    background-color: #e3f2f7;
+}
+
+.week {
+    padding: 3px 30px;
+}
+
+.time-table p {
+  margin-top: 0px;
+  padding-left: 50px;
+}
+
+.Map iframe {
+  height: 330px;
+}
+
+footer {
+    height: 260px;
+    margin-top: 80px;
+    padding-top: 5px;
+    background-color: #2e2e2e;
+    color: #fff;
+}
+
+.footer-main {
+    display: flex;
+    width: 95%;
+}
+
+.footer-left {
+    width: 65%;
+    padding-left: 30px;
+}
+
+.footer-right {
+    width: 35%;
+    margin-top: 10px;
+}
+
+.footer-right img {
+   height: 200px;
+}
+
+.footer-logo {
+    line-height: 0.3;
+}
+
+.footer-logo h2 {
+    font-size: 40px;
+    font-weight: 600;
+    font-stretch: semi-expanded;
+    margin-left: 90px;
+}
+
+.footer-logo p {
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.address {
+    font-size: 14px;
+    line-height: normal;
+    margin-left: 20px;
+}
+
+.footer-list li {
+    float: left;
+    margin-right: 35px;
+    font-size: 14px;
+    position: relative;
+    list-style: none;
+}
+
+.footer-list li::before{
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    position: absolute;
+    left: -12px;
+    top: calc(0.75em - 3px);
+}
+
+.footer-list li a {
+    text-decoration-line: none;
+    color: #fff;
+}
+
+.footer-list li a:hover {
+    text-decoration-line: underline;
+}
+
+.footer-list li br {
+  display: none;
+}
+
+.footer-copy {
+    font-size: 12px;
+    text-align: center;
+    color: #ffffff;
+    margin: 13px 0;
+}
+
+
+
+
+
+
+
+/* PC1200px向けレイアウト */
+@media all and (max-width: 1830px) {
+  .contact1-name {
+    left: 830px;
+  }
+  .contact1-p {
+    margin-left: 750px;
+  }
+  .contact1-p h3 {
+    width: 85%;
+  }
+}
+
+@media all and (max-width: 1790px) {
+  .header-list {
+    width: 80%;
+  }
+  .nab-list li {
+    margin: 15px 20px;
+  }
+  .header-btn img {
+    padding-top: 10px;
+  }
+  .contact1-name {
+    left: 820px;
+  }
+  .contact1-p {
+    margin-left: 700px;
+  }
+  .contact-text1 {
+    width: 870px;
+    padding: 50px 150px;
+  }
+  .contact-box2 img {
+    left: 1070px;
+  }
+  .contact-text2 {
+     width: 870px;
+    padding: 50px 150px;
+  }
+  .contact-text3 {
+    width: 870px;
+    padding: 50px 150px;
+  }
+  .wrap li {
+    width: 22%;
+    height: 230px;
+  }
+  .MENU-wrap img {
+    height: 220px;
+    width: 260px;
+  }
+  .contact6 {
+    padding-top: 55px;
+  }
+  .contact6-logo br {
+    line-height: 0.5;
+  }
+  .time-table p {
+    padding-left: 35px;
+  }
+}
+
+@media all and (max-width: 1700px) {
+  .container {
+    width: 70%;
+  }
+  .header-logo {
+    width: 16%;
+    margin-top: 9px;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 0.4;
+  }
+  .header-list {
+    width: 80%;
+  }
+  .nab-list li {
+    list-style: none;
+    float: left;
+    margin: 14px 13px;
+  }
+  .header-btn {
+    margin-right: 20px;
+  }
+  .header-btn img {
+    padding-top: 0px;
+  }
+  .contact-area {
+    height: 330px;
+    margin-bottom: 50px;
+  }
+  .area-top {
+    width: 75%;
+    padding-top: 30px;
+  }
+  .contact-logo h2 {
+    padding-top: 10px;
+    line-height: 0;
+  }
+  .contact-logo p {
+    font-size: 13px;
+  }
+  .contact-logo h4 {
+    font-size: 18px;
+  }
+  .Shoplist {
+    margin-top: -10px;
+  }
+  .Shoplist span {
+    font-size: 40px;
+  }
+  .contact-btn {
+    margin-top: 10px;
+  }
+  .contact1-img img {
+    height: 450px;
+  }
+  .contact1-name {
+    font-size: 40px;
+    left: 780px;
+  }
+  .contact1-p {
+    margin-left: 690px;
+  }
+  .contact1-p h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .contact1-p p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .contact-box2 img {
+    left: 1030px;
+  }
+  .MENU-wrap img {
+    width: 240px;
+  }
+  .contact6-logo h2 {
+    font-size: 37px;
+  }
+  .contact6-logo p {
+    font-size: 15px;
+  }
+  .week {
+    padding: 3px 23px;
+  }
+  .time-table p {
+    padding-left: 80px;
+  }
+}
+
+@media all and (max-width: 1640px) {
+  .contact1-img img {
+    width: 47%;
+  }
+  .contact-text1 {
+    width: 850px;
+  }
+  .contact-box2 img {
+    left: 1000px;
+  }
+  .contact-text2 {
+     width: 850px;
+  }
+  .contact-text3 {
+    width: 850px;
+  }
+  .time-table p {
+    padding-left: 60px;
+  }
+}
+
+@media all and (max-width: 1580px) {
+  .contact1-name {
+    left: 750px;
+  }
+  .contact1-p {
+    margin-left: 660px;
+    padding: 40px 60px 70px 70px;
+  }
+  .contact1-p h3 span {
+    padding-left: 135px;
+  }
+  .contact1-p p {
+    width: 100%;
+  }
+  .contact-text1 {
+    width: 800px;
+    padding: 50px 130px;
+  }
+  .contact-box2 img {
+    left: 950px;
+  }
+  .contact-text2 {
+     width: 800px;
+     padding: 50px 130px;
+  }
+  .contact-text3 {
+    width: 800px;
+    padding: 50px 130px;
+  }
+  .wrap li {
+    height: 220px;
+  }
+  .btn-reservation2 {
+    margin-top: 25px;
+  }
+  .footer-right {
+    width: 25%;
+    margin-right: 0px;
+  }
+}
+
+@media all and (max-width: 1480px) {
+  .area-top {
+    width: 85%;
+  }
+  .contact-btn img {
+    width: 43%;
+  }
+  .contact1-name {
+    left: 700px;
+  }
+  .contact1-p {
+    margin-left: 600px;
+    padding: 40px 60px 70px 80px;
+  }
+  .contact-text1 {
+    width: 750px;
+    padding: 50px 120px;
+  }
+  .contact-box2 img {
+    left: 870px;
+  }
+  .contact-text2 {
+     width: 750px;
+    padding: 50px 120px;
+  }
+  .contact-text3 {
+    width: 750px;
+    padding: 50px 120px;
+  }
+  .title-right br {
+    display: none;
+  }
+  .time-table p {
+    padding-left: 40px;
+  }
+  .footer-left {
+    width: 70%;
+  }
+  .footer-right {
+    width: 30%;
+    margin-right: 20px;
+  }
+}
+
+@media all and (max-width: 1420px) {
+  .contact1-name {
+    left: 670px;
+  }
+  .contact1-p {
+    margin-left: 570px;
+  }
+  .contact1-p h3 {
+      width: 90%;
+  }
+  .contact1-p h3 span {
+    padding-left: 120px;
+  }
+  .wrap li {
+    height: 210px;
+  }
+}
+
+@media (max-width: 1380px) {
+  .contact1-name {
+    left: 650px;
+  }
+  .contact1-p {
+    margin-left: 560px;
+  }
+  .wrap li {
+    height: 200px;
+  }
+  .btn-reservation2 img{
+    width: 90%;
+  }
+}
+
+@media (max-width: 1330px) {
+  header {
+    height: 70px;
+  }
+  .header-logo {
+    width: 17%;
+    margin-top: 5px;
+  }
+  .header-btn img {
+    height: 70px;
+    margin-top: 3px;
+  }
+  .nab-list li {
+    font-size: 14px;
+  }
+  .header-btn img {
+    height: 70px;
+  }
+  .contact1-img img {
+    height: 420px;
+    width: 45%;
+  }
+  .contact1-name {
+    left: 610px;
+  }
+  .contact1-p {
+    margin-left: 520px;
+  }
+  .contact1-p h3 {
+      width: 93%;
+  }
+  .contact-text1 {
+    width: 670px;
+    padding: 50px 80px 50px 100px;
+  }
+  .contact-box2 img {
+    left: 780px;
+  }
+  .contact-text2 {
+     width: 670px;
+    padding: 50px 80px 50px 100px;
+  }
+  .contact-text3 {
+    width: 670px;
+    padding: 50px 80px 50px 100px;
+  }
+  .contact-text3 p br {
+    display: block;
+  }
+  .title-right {
+    padding-top: 0;
+  }
+  .MENU-wrap li {
+    margin: 19px auto;
+  }
+  .week {
+    padding: 3px 21px;
+  }
+  .time-table p {
+  padding-left: 25px;
+  }
+  .footer-left {
+    padding-left: 10px;
+  }
+  .footer-logo p {
+    font-size: 14px;
+  }
+  .footer-right {
+   margin-right: 40px;
+  }
+}
+
+@media (max-width: 1290px) {
+  .header-logo {
+    width: 17%;
+  }
+  .contact1-name {
+    left: 580px;
+  }
+  .contact1-p {
+    margin-left: 500px;
+  }
+  .contact-text1 {
+    width: 640px;
+    padding: 40px 70px 50px 110px;
+  }
+  .contact-box2 img {
+    left: 730px;
+  }
+  .contact-text2 {
+    width: 640px;
+     padding: 40px 110px 50px 80px;
+  }
+  .contact-text3 {
+    width: 640px;
+    padding: 40px 70px 50px 120px;
+  }
+  .wrap li {
+    height: 190px;
+  }
+  .week {
+    padding: 3px 20px;
+  }
+  footer {
+    height: 245px;
+  }
+  .footer-logo h2 {
+    font-size: 35px;
+    margin-left: 70px;
+  }
+  .footer-right img {
+   height: 190px;
+   margin-right: 20px;
+  }
+  .footer-copy {
+    margin: 8px 0 0;
+  }
+}
+
+@media (max-width: 1250px) {
+  .container {
+    width: 73%;
+  }
+  .contact1-img img {
+    height: 400px;
+  }
+  .contact1-name {
+    top: -15px;
+    left: 560px;
+  }
+  .contact1-p {
+    margin-top: -80px;
+    margin-left: 480px;
+    padding: 30px 60px 60px 80px;
+  }
+  .contact1-p h3 span {
+    padding-left: 110px;
+  }
+  .contact-text1 {
+    width: 620px;
+    padding: 20px 70px 30px 90px;
+  }
+  .contact-box1 img {
+    height: 320px;
+    width: 320px;
+  }
+  .contact-box2 img {
+    left: 720px;
+    height: 320px;
+    width: 320px;
+  }
+  .contact-text2 {
+    width: 620px;
+    padding: 20px 100px 30px 90px;
+  }
+  .contact-box3 img {
+    height: 320px;
+    width: 320px;
+  }
+  .contact-text3 {
+    width: 620px;
+    padding: 20px 70px 30px 95px;
+  }
+  .contact6-logo {
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  header {
+    height: 65px;
+  }
+  .header-logo {
+    margin-top: 12px;
+    line-height: 0.1;
+  }
+  .header-logo h2{
+    font-size: 15px;
+  }
+  .header-logo p {
+    font-size: 7px;
+  }
+  .header-list {
+    width: 78%;
+  }
+  .nab-list li {
+    font-size: 10px;
+    margin: 6px 15px;
+  }
+  .header-btn {
+    margin-right: 40px;
+    width: 3%;
+  }
+  .header-btn img {
+    height: 50px;
+  }
+  .contact1-img img {
+    height: 380px;
+    width: 42%;
+  }
+  .contact1-name {
+    left: 510px;
+  }
+  .contact1-p {
+    margin-left: 430px;
+    padding: 20px 60px 60px 80px;
+  }
+  .contact1-p h3 {
+    margin-bottom: 20px;
+  }
+  .contact1-p h3 span {
+    padding-left: 110px;
+  }
+  .contact-title h1 {
+    margin-top: 70px;
+}
+  .contact-text1 span ,.contact-text2 span ,.contact-text3 span {
+    font-size: 3.5em;
+  }
+  .contact-text1 {
+    width: 580px;
+    padding: 20px 40px 30px 75px;
+  }
+  .contact-box2 img {
+    left: 670px;
+  }
+  .contact-text2 {
+    width: 580px;
+    padding: 20px 70px 30px 70px;
+  }
+  .contact-text3 {
+    width: 580px;
+    padding: 20px 40px 30px 75px;
+  }
+  .title-right {
+    margin-top: 100px;
+  }
+  .wrap h4 {
+    margin-top: 10px;
+  }
+  .MENU-wrap img {
+    height: 200px;
+    width: 220px;
+  }
+  .btn-MENU {
+    width: 180px;
+  }
+  .contact6-logo h2 {
+    font-size: 32px;
+  }
+  .contact6-logo p {
+    font-size: 13px;
+  }
+  .tell span {
+    font-size: 27px;
+  }
+  .week {
+    padding: 3px 17px;
+  }
+  table {
+    font-size: 15px;
+  }
+  .time-table p {
+    padding-left: 30px;
+  }
+  .Map iframe {
+    height: 290px;
+  }
+}
+
+  @media (max-width: 1160px) {
+  .contact1-name {
+    left: 490px;
+  }
+  .contact1-p {
+    margin-left: 410px;
+    padding: 20px 50px 60px 70px;
+  }
+  .title-left {
+    margin-right: 30px;
+  }
+  .title-right {
+    padding-left: 35px;
+  }
+  .wrap li {
+    height: 180px;
+  }
+}
+
+@media (max-width: 1140px) {
+  footer {
+    height: 225px;
+  }
+  .footer-logo h2 {
+    font-size: 29px;
+  }
+  .footer-logo p {
+    font-size: 13px;
+  }
+  .footer-list li {
+    font-size: 13px;
+  }
+  .footer-right img {
+   height: 170px;
+   margin-right: 0;
+  }
+}
+
+@media (max-width: 1125px) {
+  .contact1-name {
+    top: -20px;
+    left: 480px;
+    font-size: 36px;
+  }
+  .contact1-p {
+    padding: 20px 40px 60px 50px;
+  }
+  .contact1-p h3 span {
+    padding-left: 100px;
+  }
+  .contact-text1 span ,.contact-text2 span ,.contact-text3 span {
+    font-size: 3.3em;
+    letter-spacing: 1px;
+    padding-right: 2px;
+  }
+  .contact-text1 {
+    left: 230px;
+    padding: 50px 55px 50px 90px;
+  }
+  .contact-box2 img {
+    left: 650px;
+  }
+  .contact-text2 {
+    padding: 50px 90px 50px 70px;
+  }
+  .contact-text3 {
+    left: 230px;
+    padding: 50px 40px 50px 90px;
+  }
+  .MENU-wrap {
+    margin-top: 18px;
+  }
+  .btn-MENU {
+    width: 160px;
+    height: 35px;
+    padding: 6px;
+  }
+  footer {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .top-wrapper {
+    display: none;
+  }
+  .top-wrapper3 {
+    display: block;
+  }
+  .contact1 {
+    width: 100%;
+  }
+  .contact1-img img {
+    width: 50%;
+  }
+  .contact1-name {
+    left: 560px;
+  }
+  .contact1-p {
+    margin-left: 480px;
+    padding: 20px 50px 60px 70px;
+  }
+  .contact1-p h3 span {
+    padding-left: 130px;
+  }
+  .contact-text1 span ,.contact-text2 span ,.contact-text3 span {
+    font-size: 3.2em;
+  }
+  .contact-text1 h3 ,.contact-text2 h3 ,.contact-text3 h3{
+    font-size: 20px;
+  }
+  .contact-text1 p br ,.contact-text2 p br ,.contact-text3 p br{
+    display: none;
+  }
+  .contact-text1 {
+    width: 540px;
+    padding: 40px 40px 40px 85px;
+  }
+  .contact-box2 img {
+    left: 600px;
+  }
+  .contact-text2 {
+    width: 540px;
+    padding: 40px 90px 40px 60px;
+  }
+  .contact-text3 {
+    width: 540px;
+    padding: 40px 40px 40px 90px;
+  }
+  .contact-top {
+    width: 80%;
+  }
+  .title-left {
+    margin-right: 20px;
+  }
+  .title-right {
+    padding-left: 35px;
+  }
+  .wrap li {
+    height: 170px;
+  }
+  .wrap h4 {
+    font-size: 18px;
+  }
+  .week {
+    padding: 3px 15px;
+  }
+  .btn-reservation2 img{
+    width: 90%;
+  }
+  .footer-logo br {
+    display: none;
+  }
+  .address br {
+    display: block;
+  }
+  .address {
+    margin-top: 17px;
+    margin-bottom: -3px;
+  }
+  .footer-list li {
+    line-height: 1.3;
+  }
+  .footer-copy {
+    margin: 5px 0 0;
+  }
+}
+
+@media (max-width: 1050px) {
+  .nab-list li {
+    margin: 6px 12px;
+  }
+  .contact1-name {
+    left: 530px;
+  }
+  .contact1-p {
+    margin-left: 460px;
+    padding: 20px 40px 60px 60px;
+  }
+  .contact-title h1 {
+    font-size: 70px;
+    margin-top: 50px;
+  }
+  .contact-box1 img , .contact-box3 img {
+    height: 300px;
+    width: 300px;
+  }
+  .contact-text1 {
+    width: 510px;
+    padding: 40px 40px 40px 65px;
+  }
+  .contact-box2 img {
+    left: 580px;
+    height: 300px;
+    width: 300px;
+  }
+  .contact-text2 {
+    padding: 40px 70px 40px 60px;
+  }
+  .contact-text3 {
+    width: 510px;
+    padding: 40px 40px 40px 75px;
+  }
+  .title-left {
+    margin-right: 10px;
+  }
+  .title-right {
+    margin-top: 80px;
+  }
+  .MENU-wrap img {
+    height: 190px;
+    width: 200px;
+  }
+  .btn-MENU {
+    width: 150px;
+  }
+  .tell span {
+    font-size: 25px;
+  }
+  .week {
+    padding: 3px 12px;
+  }
+}
+
+/* タブレット向けレイアウト */
+@media (max-width: 998px) {
+  p {
+    font-size: 13px;
+  }
+  .container {
+    width: 85%;
+  }
+  header {
+    height: 60px;
+  }
+  .header-logo {
+    margin-top: 8px;
+    width: 15%;
+  }
+  .nab-list li {
+    margin: 2px 17px 0;
+  }
+  .header-btn {
+    margin-right: 30px;
+  }
+  .header-btn img {
+    height: 43px;
+  }
+  .contact-area {
+    height: 300px;
+  }
+  .area-top {
+    width: 85%;
+    padding-top: 30px;
+  }
+  .contact-logo h2 {
+    font-size: 25px;
+  }
+  .contact-logo p {
+    font-size: 10px;
+  }
+  .contact-logo h4 {
+    font-size: 16px;
+  }
+  .Shoplist {
+    margin-top: -5px;
+  }
+  .Shoplist span {
+    font-size: 35px;
+  }
+  .contact-btn img {
+    width: 40%;
+  }
+  .contact1-img img {
+    height: 350px;
+  }
+  .contact1-name {
+    top: 0px;
+    left: 520px;
+    font-size: 30px;
+  }
+  .contact1-p {
+    margin-left: 450px;
+    padding: 30px 40px 70px 50px;
+  }
+  .contact1-p h3 {
+    font-size: 18px;
+  }
+  .contact-text1 {
+    width: 575px;
+    padding: 45px 40px 45px 65px;
+    margin-bottom: 80px;
+  }
+  .contact-box2 img {
+    left: 590px;
+    height: 300px;
+    width: 300px;
+  }
+  .contact-text2 {
+    width: 575px;
+    padding: 45px 70px 45px 60px;
+    margin-bottom: 90px;
+  }
+  .contact-text3 {
+    width: 575px;
+    padding: 45px 40px 45px 75px;
+  }
+  .title-right {
+    padding-top: 10px;
+    line-height: 2.3;
+  }
+  .title-right br {
+    display: block;
+  }
+  .MENU-wrap li h4 {
+   font-size: 20px
+  }
+  .btn-MENU {
+    width: 130px;
+    height: 33px;
+  }
+  .week {
+    padding: 3px 17px;
+  }
+  footer {
+    height: 200px;
+  }
+  .footer-left {
+    width: 75%;
+  }
+  .footer-right {
+    width: 25%;
+  }
+  .footer-right img {
+    height: 150px;
+  }
+}
+
+@media all and (max-width: 950px) {
+  p {
+    font-size: 12px;
+  }
+  .nab-list li {
+    margin: 2px 15px 0;
+  }
+  .Shoplist {
+    margin-top: 0px;
+  }
+  .contact1-img img {
+   height: 330px;
+  }
+  .contact1-name {
+    left: 490px;
+  }
+  .contact1-p {
+    margin-top: -70px;
+    margin-left: 420px;
+    padding: 30px 40px 60px 60px;
+  }
+  .contact1-p h3 {
+    width: 85%;
+  }
+  .contact1-p h3 span {
+    padding-left: 88px;
+  }
+  .contact-text1 {
+    width: 560px;
+  }
+  .contact-box2 img {
+    left: 570px;
+  }
+  .contact-text2 {
+    width: 560px;
+  }
+  .contact-text3 {
+    width: 560px;
+  }
+  .contact-top {
+    width: 90%;
+  }
+  .btn-case {
+    width: 210px;
+    height: 60px;
+    font-size: 15px;
+    line-height: 60px;
+  }
+  .week {
+    padding: 3px 15px;
+  }
+  .footer-right img {
+    margin-right: 50px;
+  }
+}
+
+@media all and (max-width: 920px) {
+  .contact1-name {
+    left: 480px;
+    font-size: 28px;
+  }
+  .contact1-p {
+    margin-left: 390px;
+  }
+  .contact1-p h3 {
+    width: 88%;
+  }
+  .contact1-p p {
+    padding-top: 5px;
+  }
+  .contact1-p a {
+    width: 38%;
+  }
+  .contact-title h1 {
+    margin-top: 40px;
+    padding: 40px 0 0;
+  }
+  .contact-text1 {
+    width: 525px;
+  }
+  .contact-box2 img {
+    left: 530px;
+  }
+  .contact-text2 {
+    width: 525px;
+  }
+  .contact-text3 {
+    width: 525px;
+  }
+  .title-right {
+    margin: 55px 0 0;
+  }
+  .wrap {
+    margin: 20px auto 0;
+  }
+  .wrap li {
+    width: 30%;
+    height: 200px;
+  }
+  .MENU-wrap li {
+    width: 30%;
+    margin: 15px auto;
+  }
+  .contact6 {
+    padding-top: 40px;
+  }
+  .week {
+    padding: 3px 13px;
+  }
+}
+
+@media all and (max-width: 880px) {
+  .nab-list li {
+    margin: 2px 8px 0;
+  }
+  .contact1-name {
+    left: 450px;
+  }
+  .contact1-img img {
+   height: 310px;
+  }
+  .contact1-p {
+    margin-left: 380px;
+    padding: 20px 40px 50px 50px;
+  }
+  .contact1-p h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+  .contact1-p p {
+    width: 87%;
+  }
+  .contact-box1 img , .contact-box3 img {
+    height: 280px;
+    width: 280px;
+  }
+  .contact-text1 {
+    left: 220px;
+    width: 500px;
+    padding: 45px 40px 45px 60px;
+  }
+  .contact-text1 h3 , .contact-text2 h3, .contact-text3 h3 {
+    margin-bottom: 5px;
+  }
+  .contact-box2 img {
+    left: 510px;
+    height: 290px;
+    width: 290px;
+  }
+  .contact-text3 {
+    left: 220px;
+    width: 500px;
+    padding: 45px 40px 45px 65px;
+  }
+  .wrap li {
+    height: 190px;
+  }
+  .wrap h4 {
+    font-size: 16px;
+  }
+  .btn-case {
+    width: 190px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 55px;
+  }
+  .MENU-wrap img {
+    height: 170px;
+    width: 180px;
+  }
+  footer {
+    height: 200px;
+  }
+  .footer-main {
+    width: 100%;
+  }
+  .footer-left {
+    width: 100%;
+    padding-left: 0px;
+  }
+  .footer-right {
+    display: none;
+  }
+}
+
+@media all and (max-width: 840px) {
+  .contact-area {
+    height: 230px;
+  }
+  .area-top {
+    width: 93%;
+    padding-top: 10px;
+  }
+  .contact-logo h4 {
+    font-size: 14px;
+  }
+  .Shoplist span {
+    font-size: 32px;
+  }
+  .contact-btn img {
+    margin-top: 0px;
+  }
+  .contact1-name {
+    left: 430px;
+  }
+  .contact1-p {
+    margin-left: 360px;
+  }
+  .contact1-p h3 span {
+    padding-left: 100px;
+  }
+  .contact-box1 img , .contact-box3 img {
+    height: 270px;
+    width: 270px;
+  }
+  .contact-text1 span ,.contact-text2 span ,.contact-text3 span {
+    font-size: 3.1em;
+    letter-spacing: 0;
+    padding-right: 5px;
+  }
+  .contact-text1 h3 ,.contact-text2 h3 ,.contact-text3 h3{
+    font-size: 17px;
+  }
+  .contact-text1 p {
+    padding-left: 5px;
+  }
+  .contact-text1 {
+    left: 200px;
+    width: 480px;
+    padding: 40px 40px 40px 60px;
+    margin-bottom: 75px;
+  }
+  .contact-box2 img {
+    left: 470px;
+    height: 280px;
+    width: 280px;
+  }
+  .contact-text2 {
+    width: 480px;
+    padding: 40px 70px 40px 60px;
+    margin-bottom: 80px;
+  }
+  .contact-text3 {
+    left: 200px;
+    width: 480px;
+    padding: 40px 40px 40px 68px;
+  }
+  .contact6-logo h2 {
+    font-size: 28px;
+  }
+  .contact6-logo p {
+    font-size: 12px;
+  }
+  .tell {
+    width: 45%;
+  }
+  .tell span {
+    font-size: 22px;
+  }
+  .btn-reservation2 {
+    width: 50%;
+  }
+  table {
+    font-size: 14px;
+  }
+  .week {
+    padding: 3px 11px;
+  }
+  .Map iframe {
+    height: 270px;
+  }
+}
+
+@media all and (max-width: 825px) {
+  .contact1-name {
+    left: 420px;
+  }
+  .contact1-p {
+    padding: 20px 35px 50px 40px;
+  }
+  .contact1-p h3 span {
+    padding-left: 80px;
+  }
+  .wrap li {
+    height: 180px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  header {
+    height: 50px;
+  }
+  .header-logo {
+    margin-top: 6px;
+  }
+  .nab-list li {
+    margin: 0px 8px;
+  }
+  .header-btn img {
+    height: 38px;
+  }
+  .contact-area {
+    margin: 25px 0;
+  }
+  .contact1-img img {
+   width: 50%;
+   height: 300px;
+  }
+  .contact1-name {
+    left: 410px;
+  }
+  .contact1-p {
+    margin-left: 350px;
+    margin-bottom: 25px;
+  }
+  .contact1-p h3 {
+    padding-left: 20px;
+    width: 90%;
+  }
+  .contact1-p h3 span {
+    padding-left: 70px;
+  }
+  .contact1-p p {
+    width: 95%;
+  }
+  .contact-text1 {
+    width: 460px;
+    padding: 40px 40px 40px 65px;
+  }
+  .contact-box2 img {
+    left: 450px;
+  }
+  .contact-text2 {
+    width: 460px;
+    padding: 40px 70px 40px 55px;
+  }
+  .contact-text3 {
+    width: 460px;
+    padding: 40px 40px 40px 70px;
+  }
+  .title-right br {
+    display: none;
+  }
+  .contact6-logo span {
+    display: none;
+  }
+  .Shoplist2 {
+    display: block;
+  }
+  .tell {
+    width: 80%;
+  }
+  .tell span {
+    font-size: 33px;
+  }
+  .btn-reservation2 {
+    width: 80%;
+    margin: 5px auto 15px;
+  }
+  .week {
+    padding: 3px 10px;
+  }
+  .Map iframe {
+    height: 280px;
+  }
+}
+
+@media all and (max-width: 770px) {
+  .contact1-img img {
+   height: 290px;
+  }
+  .contact1-name {
+    left: 390px;
+  }
+  .contact1-p {
+    margin-left: 330px;
+    padding: 20px 20px 50px 40px;
+  }
+  .contact-text1 h3 ,.contact-text2 h3 ,.contact-text3 h3 {
+    line-height: 1.3;
+  }
+  .contact-text1 {
+    left: 210px;
+    width: 410px;
+    padding: 40px 20px 40px 50px;
+  }
+  .contact-box2 img {
+    left: 400px;
+  }
+  .contact-text2 {
+    width: 410px;
+    padding: 40px 60px 40px 55px;
+  }
+  .contact-text3 {
+    left: 210px;
+    width: 410px;
+    padding: 37px 20px 40px 60px;
+  }
+  .title-right br {
+    display: none;
+  }
+  .wrap li {
+    height: 170px;
+  }
+}
+
+@media all and (max-width: 725px) {
+  .header-list {
+    width: 85%;
+  }
+  .nab-list li {
+    margin: 0px 7px;
+  }
+  .contact1-img img {
+    width: 48%;
+   height: 260px;
+  }
+  .contact1-name {
+    left: 360px;
+  }
+  .contact1-p {
+    margin-left: 300px;
+    padding: 8px 15px 35px 40px;
+  }
+  .contact1-p h3 {
+    width: 88%;
+    margin-bottom: 10px;
+  }
+  .contact-box1 img , .contact-box3 img {
+    height: 250px;
+    width: 250px;
+  }
+  .contact-text1 span ,.contact-text2 span ,.contact-text3 span {
+    font-size: 2.8em;
+  }
+  .contact-text1 {
+    left: 185px;
+    width: 390px;
+    padding: 40px 20px 40px 55px;
+  }
+  .contact-box2 img {
+    left: 385px;
+    height: 260px;
+    width: 260px;
+  }
+  .contact-text2 {
+    width: 385px;
+    padding: 40px 50px 40px 50px;
+  }
+  .contact-text3 {
+    left: 185px;
+    width: 390px;
+    padding: 37px 20px 40px 60px;
+  }
+  .title-left {
+    margin-left: 20px;
+  }
+  .title-right {
+    padding-left: 30px;
+    line-height: 1.8;
+  }
+  .wrap li {
+    height: 160px;
+  }
+  .MENU-wrap img {
+    height: 160px;
+    width: 170px;
+  }
+  table {
+    font-size: 13px;
+  }
+  .time {
+    padding: 3px 9px;
+  }
+  .week {
+    padding: 3px 10px;
+  }
+  .time-table p {
+    padding-left: 20px;
+  }
+}
+
+@media all and (max-width: 695px) {
+  .contact1-name {
+    left: 340px;
+  }
+  .contact1-p {
+    margin-left: 280px;
+    padding: 8px 15px 35px 40px;
+  }
+}
+
+/* モバイル向けレイアウト */
+@media all and (max-width: 670px) {
+  .container {
+    width: 90%;
+  }
+  .header-top {
+    width: 100%;
+  }
+  .header-logo {
+    width: 30%;
+    margin: 0;
+    padding: 5px 0;
+    margin-left: -20px;
+  }
+  .header-list {
+    display: none;
+  }
+  .header-btn {
+    display: none;
+  }
+  .none {
+    display: block;
+    margin: 0 0 0 auto;
+  }
+  .top-wrapper, .top-wrapper3 {
+    display: none;
+  }
+  .top-wrapper2 {
+    display: block;
+  }
+  .contact1-name {
+    top: -5px;
+    left: 325px;
+  }
+  .contact1-p {
+    margin-top: -80px;
+    margin-left: 280px;
+    padding: 10px 10px 30px 23px;
+  }
+  .contact1-p h3 {
+    width: 90%;
+    margin-bottom: 12px;
+  }
+  .contact-title h1 {
+    font-size: 60px
+  }
+  .contact-title p {
+    font-size: 20px;
+  }
+  .contact-box1 img , .contact-box2 img , .contact-box3 img {
+    position: static;
+    display: block;
+    margin: 20px auto 0;
+  }
+  .contact-text1 , .contact-text2 , .contact-text3  {
+    position: static;
+    margin: -60px auto 0;
+    width: 90%;
+    padding: 60px 30px 30px;
+  }
+  .contact-text1 h3, .contact-text2 h3 , .contact-text3 h3 {
+    width: 75%;
+    margin: 0 auto 10px;
+  }
+  .contact-text1 span ,.contact-text2 span ,.contact-text3 span {
+    padding-right: 10px;
+  }
+  .contact-top {
+    margin-top: 0;
+  }
+  .title-right {
+    margin-top: 65px;
+    height: 65px;
+    padding-top: 2px;
+    line-height: 1.5;
+  }
+  .wrap {
+    margin-top: 10px;
+  }
+  .wrap li {
+    width: 43%;
+    height: 200px;
+  }
+  .btn-case {
+    width: 210px;
+    height: 60px;
+    font-size: 15px;
+    line-height: 65px;
+  }
+  .MENU-wrap li {
+    width: 44%;
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+  .MENU-wrap img {
+    width: 190px;
+  }
+  .contact-main {
+    display: block;
+  }
+  .contact6-left ,.contact6-right {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contact6-logo h2 {
+    filter: drop-shadow(10px 10px 5px #FFD9D7);
+  }
+  .Shoplist2 {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .tell {
+    width: 50%;
+  }
+  .btn-reservation2 {
+    width: 50%;
+  }
+  .btn-reservation2 img {
+    width: 90%;
+    margin-top: 17px;
+  }
+  table {
+    width: 90%;
+  }
+  .time ,.week {
+    padding: 3px 15px;
+  }
+  .time-table p {
+    text-align: right;
+    padding-right: 35px;
+    padding-bottom: 10px;
+  }
+  .Map iframe {
+    height: 300px;
+  }
+}
+
+@media all and (max-width: 645px) {
+  .contact1-img {
+    position: static;
+  }
+  .contact1-img img {
+    width: 100%;
+    height: 330px;
+  }
+  .contact1-name {
+    position:static;
+    margin-top: -50px;
+    margin-left: 10px;
+  }
+  .contact1-p {
+    margin-left: 0px;
+    margin-top: -70px;
+    padding: 15px 10px 30px 0px;
+  }
+  .contact1-p h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  .contact1-p h3 br , .contact1-p p br{
+    display: none;
+  }
+  .contact1-p h3 span {
+    padding-left: 0px;
+  }
+  .contact1-p p {
+    text-align: start;
+    padding: 0 30px;
+  }
+  .contact1-p a {
+    display: block;
+    width: 30%;
+    font-size: 13px;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+  }
+  .contact-box1 img , .contact-box2 img , .contact-box3 img {
+    margin-top: 13px;
+  }
+  .contact-text1 h3, .contact-text2 h3 , .contact-text3 h3 {
+    width: 80%;
+  }
+  .MENU-wrap li {
+    margin-bottom: 20px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .menu-btn {
+    right: 30px;
+  }
+  .contact-area {
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .area-top {
+    width: 100%;
+  }
+  .contact-btn img {
+    width: 50%;
+  }
+  .contact1-p {
+    padding: 15px 20px 40px 10px;
+  }
+  .contact1-p h3 {
+    text-align: start;
+    padding-left: 40px;
+  }
+  .contact1-p h3 br {
+    display: block;
+  }
+  .contact1-p h3 span {
+    padding-left: 180px;
+  }
+  .contact1-p p {
+    padding: 0 20px;
+  }
+  .contact-text1 , .contact-text2 , .contact-text3  {
+    width: 93%;
+  }
+  .contact-text1 h3, .contact-text2 h3 , .contact-text3 h3 {
+    width: 85%;
+  }
+  .title-right {
+    padding-left: 20px;
+  }
+  .wrap li {
+    height: 190px;
+  }
+  .tell span {
+    font-size: 30px;
+  }
+  .btn-reservation2 img {
+    margin-top: 20px;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .area-top {
+    display:block;
+    width: 90%;
+    padding-top: 0px;
+  }
+  .contact-logo , .Shoplist {
+    width: 100%;
+    padding-top: 10px;
+  }
+  .contact-logo p {
+    margin-top: -4px;
+  }
+  .contact-logo h4 {
+    font-size: 13px;
+    margin-top: -5px;
+  }
+  .Shoplist {
+    padding-top: 0;
+    margin-top: 5px;
+  }
+  .Shoplist span {
+    font-size: 28px;
+  }
+  .contact1-p h3 span {
+    padding-left: 150px;
+  }
+  .contact1-p a {
+    width: 30%;
+    font-size: 13px;
+    margin: 15px auto 0;
+    padding: 8px 10px;
+  }
+  .contact-text1 , .contact-text2 , .contact-text3  {
+    width: 99%;
+  }
+  .contact-text1 h3, .contact-text2 h3 , .contact-text3 h3 {
+    width: 90%;
+  }
+  .contact-top {
+    width: 80%;
+  }
+  .title-right {
+    margin-left: 15px;
+    padding-top: 0;
+    line-height: 1.3;
+  }
+  .wrap li {
+    height: 170px;
+  }
+  .wrap h4 {
+    margin-top: 0;
+  }
+  .MENU-wrap img {
+    height: 150px;
+    width: 170px;
+  }
+  .MENU-wrap li h4 {
+   font-size: 18px
+  }
+  .tell {
+    width: 53%;
+  }
+  .btn-reservation2 {
+    width: 47%;
+  }
+  .btn-reservation2 img {
+    margin-top: 25px;
+  }
+  .time-table p {
+    padding-right: 30px;
+  }
+  footer {
+    height: 200px;
+  }
+  .footer-main {
+    width: 110%;
+  }
+}
+
+@media all and (max-width: 525px) {
+  .wrap li {
+    height: 160px;
+  }
+  .MENU-wrap li {
+    margin-bottom: 15px;
+  }
+}
+
+
+@media all and (max-width: 500px) {
+  header {
+    top: 5px;
+  }
+  .header-logo {
+    margin-left: -5px;
+  }
+  .menu-btn {
+    top: 10px;
+    right: 35px;
+    height: 30px;
+    width: 30px;
+  }
+  .contact-area {
+    margin: 15px 0;
+    padding-top: 15px;
+    padding-bottom: 3px;
+  }
+  .contact-logo h2 , .contact-logo p{
+    display: none;
+  }
+  .contact-btn {
+    margin-top: 10px;
+  }
+  .contact1-img img {
+    height: 280px;
+  }
+  .contact2 img {
+   margin-top: -10px;
+  }
+  .contact1-p h3 {
+    padding-left: 30px;
+    margin-bottom: 11px;
+  }
+  .contact1-p h3 span {
+    padding-left: 100px;
+  }
+  .contact-box1 img , .contact-box3 img {
+    height: 200px;
+    width: 210px;
+  }
+  .contact-box2 img {
+    height: 210px;
+    width: 210px;
+  }
+  .contact-text1 h3, .contact-text2 h3 , .contact-text3 h3 {
+    width: 93%;
+  }
+  .contact-text1 h3 br, .contact-text2 h3 br, .contact-text3 h3 br {
+    display: none;
+  }
+  .contact-top {
+    display: block;
+    width: 90%;
+  }
+  .title-left {
+    width: 100%;
+    margin-left: -5px;
+  }
+  .title-right {
+    display: none;
+  }
+  .wrap , .MENU-wrap {
+    margin-left: -35px;
+  }
+  .wrap li {
+    height: 160px;
+  }
+  .wrap h4 {
+    font-size: 14px;
+  }
+  .Shoplist2 {
+    display: block;
+  }
+  .tell {
+    width: 90%;
+  }
+  .btn-reservation2 {
+    width: 90%;
+  }
+  .btn-reservation2 img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .time-table p {
+    padding-right: 25px;
+  }
+  footer {
+    height: 330px;
+  }
+  .footer-main {
+    text-align: center;
+    width: 100%;
+  }
+  .footer-logo h2 {
+    margin-left: 0px;
+  }
+  .footer-list li {
+    width: 40%;
+    background-color: #404040;
+    padding: 5px;
+    margin: 5px 10px;
+  }
+  .footer-list li::before{
+    display: none;
+  }
+  .footer-list li br {
+    display: block;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .contact-logo h4 {
+    font-size: 12px;
+  }
+  .Shoplist span {
+    font-size: 25px;
+  }
+  .Shoplist p {
+    font-size: 10px;
+  }
+  .contact-btn img {
+    width: 60%;
+  }
+  .contact1-p {
+    padding: 10px 30px 30px 20px;
+  }
+  .contact1-p h3 {
+    padding-left: 0px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .contact1-p h3 span {
+    padding-left: 0px;
+  }
+  .contact1-p p {
+    padding: 0;
+  }
+  .contact1-p a {
+    margin-top: 10px;
+    width: 35%;
+  }
+  .contact-title p {
+    margin-top: 2px;
+  }
+  .contact-text1 h3, .contact-text2 h3 , .contact-text3 h3 {
+    width: 100%;
+  }
+  .wrap {
+    margin-top: 3px;
+  }
+  .wrap li {
+    height: 145px;
+  }
+  .btn-case {
+    width: 160px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+    margin: 15px auto 50px;
+  }
+  .MENU-wrap {
+    margin-top: 10px;
+}
+  .MENU-wrap li {
+    width: 45%;
+    margin-bottom: 10px;
+  }
+  .MENU-wrap img {
+    height: 140px;
+    width: 150px;
+  }
+  .MENU-wrap li h4 {
+   font-size: 17px;
+   padding-top: 6px;
+   height: 40px;
+  }
+  .btn-MENU {
+    font-size: 11px;
+    width: 105px;
+    height: 25px;
+    padding: 2px;
+  }
+  .contact6 {
+    padding-top: 15px;
+  }
+  .contact6-logo br {
+    display: none;
+  }
+  .time ,.week {
+    padding: 3px 10px;
+  }
+  .time-table p {
+    padding-right: 20px;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .contact-text1 , .contact-text2 , .contact-text3  {
+    padding: 65px 30px 25px;
+  }
+  .contact-text1 h3 ,.contact-text2 h3 ,.contact-text3 h3 {
+    font-size: 16px;
+    line-height: 1.1;
+    margin: 0 auto 5px;
+  }
+  .contact-text1 span ,.contact-text2 span ,.contact-text3 span {
+    font-size: 2.5em;
+    padding-right: 5px;
+  }
+  .contact-top {
+    width: 97%;
+  }
+  .wrap li {
+    height: 140px;
+  }
+  .btn-reservation2 img {
+    width: 77%;
+  }
+  .time ,.week {
+    padding: 3px 9px;
+  }
+  .footer-main {
+    width: 110%;
+    margin-left: -23px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .header-logo {
+    margin-left: 0px;
+  }
+  .menu-btn {
+    right: 22px;
+  }
+  .Shoplist span {
+    font-size: 26px;
+  }
+  .contact-btn img {
+    margin-top: 0px;
+  }
+  .contact1-img img {
+    height: 220px;
+  }
+  .contact1-name {
+    font-size: 24px;
+  }
+  .contact1-p {
+    padding: 5px 30px 20px 20px;
+  }
+  .contact1-p a {
+    width: 40%;
+  }
+  .contact-title h1 {
+    font-size: 50px;
+  }
+  .contact-box1 img , .contact-box3 img {
+    height: 160px;
+    width: 180px;
+  }
+  .contact-box2 img {
+    height: 170px;
+    width: 190px;
+  }
+  .contact-text1 h3 ,.contact-text2 h3 ,.contact-text3 h3 {
+    font-size: 15px;
+  }
+  .wrap li {
+    height: 150px;
+  }
+  .wrap li img {
+    width: 60%;
+  }
+  .MENU-wrap img {
+    height: 120px;
+    width: 130px;
+  }
+  .btn-MENU {
+    margin-bottom: 7px;
+  }
+  table {
+    width: 100%;
+  }
+  .time-table p {
+    padding-right: 5px;
+  }
+  .Map iframe {
+    height: 280px;
+  }
+}
+
+@media all and (max-width: 370px) {
+  .header-logo {
+    width: 35%;
+    margin-left: 0px;
+  }
+  .top-wrapper2 {
+    display: none;
+  }
+  .top-wrapper4 {
+    display: block;
+  }
+  .contact1-name {
+    font-size: 24px;
+  }
+  .contact1-p {
+    padding: 4px 10px 20px;
+  }
+  .contact1-p h3 {
+    font-size: 15px;
+    padding-left: 5px;
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+  }
+  .contact1-p a {
+    margin-top: 6px;
+  }
+  .contact-text1 , .contact-text2 , .contact-text3  {
+    padding: 70px 15px 20px;
+  }
+  .contact-text1 h3 ,.contact-text2 h3 ,.contact-text3 h3 {
+    font-size: 14px;
+  }
+  .contact-title h1 {
+    font-size: 43px;
+  }
+  .contact-title p {
+    font-size: 16px;
+  }
+  .wrap li {
+    width: 45%;
+  }
+  .wrap h4 {
+    font-size: 13px;
+  }
+  .MENU-wrap li h4 {
+   font-size: 16px;
+   padding-top: 7px;
+  }
+  .btn-MENU {
+    width: 90px;
+  }
+  .contact6-logo h2 {
+    padding-left: 10px;
+    padding-right: 0;
+  }
+  .contact6-logo p {
+    display: none;
+  }
+  .tell {
+    margin: 3px auto;
+  }
+  .tell span {
+    font-size: 25px;
+  }
+  .btn-reservation2 img {
+    width: 80%;
+  }
+  .time ,.week {
+    padding: 3px 9px;
+  }
+  footer {
+    height: 305px;
+  }
+  .footer-logo h2 {
+    font-size: 27px;
+  }
+  .mini {
+    display: none;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .wrap , .MENU-wrap {
+    width: 121%;
+    margin-left: -50px;
+  }
+  .wrap li {
+    height: 145px;
+  }
+  .wrap li {
+    margin-bottom: 5px;
+  }
+  .MENU-wrap li {
+    margin: 7px;
+  }
+  .MENU-wrap img {
+    width: 120px;
+  }
+  footer {
+    height: 295px;
+  }
+  .footer-list li {
+    width: 38%;
+    font-size: 11px;
+  }
+}
+
+@media all and (max-width: 330px) {
+  .contact-btn img {
+    width: 70%;
+  }
+  .contact-text1 span ,.contact-text2 span ,.contact-text3 span {
+    font-size: 2.3em;
+  }
+  .contact1-p a {
+    font-size: 10px;
+  }
+  .contact-top {
+    display: block;
+  }
+  .wrap {
+    margin-top: -10px;
+  }
+  .wrap li {
+    height: 130px;
+  }
+  .MENU-wrap li {
+    margin: 6.7px;
+  }
+  .MENU-wrap img {
+    height: 100px;
+    width: 110px;
+  }
+  .time ,.week {
+    padding: 3px 5px;
+  }
+  .Map iframe {
+    height: 250px;
+  }
+}
+
+@media all and (max-width: 300px) {
+  header {
+    height: 30px;
+  }
+  .header-logo {
+    width: 40%;
+  }
+  .contact-btn img {
+    width: 80%;
+  }
+  .contact1-name {
+    font-size: 22px;
+  }
+  .wrap li {
+    height: 110px;
+    padding: 10px 0;
+  }
+  .MENU-wrap {
+    width: 126%;
+  }
+  .MENU-wrap li {
+    margin: 6px;
+  }
+  .MENU-wrap li h4 {
+   font-size: 14px;
+  }
+  .MENU-wrap img {
+    height: 90px;
+    width: 100px;
+  }
+  .btn-reservation2 img {
+    width: 90%;
+  }
+  .Map iframe {
+    height: 230px;
+  }
+}
